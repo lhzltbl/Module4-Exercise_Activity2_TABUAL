@@ -33,21 +33,74 @@
     </ContentPage>
 
     <!--Second Page-->
-    <ContentPage>
+    <ContentPage BackgroundImageSource="brown.jpg">
         <ContentPage.Content>
             <StackLayout>
-                <Label Text="Lhizel N. Tabual"/>
-                <Label Text="Barista"/>
+                <Label Text="Barista's Choice"
+                       TextColor="White"
+                       FontSize="40"
+                       FontFamily="Rage"
+                       HorizontalOptions="CenterAndExpand"/>
+                
+                <ListView x:Name="CoffeeView" ItemsSource="{Binding Coffee}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ImageCell ImageSource="{Binding Image}" Text="{Binding CoffeeName}"
+                       TextColor="#503C3C"
+                       Detail="{Binding CoffeeDetails}"
+                       DetailColor="White">
+                                <ImageCell.ContextActions>
+                                    <MenuItem Text="Delete" Clicked="MenuDelete"/>
+                                </ImageCell.ContextActions>
+                            </ImageCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </StackLayout>
         </ContentPage.Content>
     </ContentPage>
 
-    <!--Third Page-->    
-    <ContentPage>
+    <!--Third Page-->
+    <ContentPage BackgroundImageSource="brown.jpg">
         <ContentPage.Content>
-            <StackLayout>
-                <Label Text="Lhizel N. Tabual"/>
-                <Label Text="Barista"/>
+            <StackLayout HorizontalOptions="CenterAndExpand" Padding="10">
+                <Label Text="Rate My Performance!"
+                            TextColor="White"
+                            FontSize="50"
+                            FontFamily="Rage"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="Center"/>
+
+                <TableView Intent="Form">
+                    <TableRoot>
+                        <TableSection>
+                            <EntryCell Label="First Name"
+                                        Placeholder="Enter your first name"
+                                        x:Name="fname"/>
+                            <EntryCell Label="Last Name"
+                                        Placeholder="Enter your last name"
+                                        x:Name="lname"/>
+                            <EntryCell Label="Email"
+                                        Placeholder="Enter your email"
+                                        x:Name="myEmail"/>
+                            <EntryCell Label="Message"
+                                        Placeholder="How was my service?"
+                                        x:Name="msg"/>
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
+
+                <Label Text="Hi! I'd like to know how I was doing, hopefully I served you well ^.^"
+                        TextColor="Black"
+                        FontFamily="Bernhc"
+                        FontSize="Medium"
+                        HorizontalOptions="CenterAndExpand"/>
+
+                <Button Text="Submit Feedback"
+                        TextColor="White"
+                        FontFamily="Bernhc"
+                        BackgroundColor="#503C3C"
+                        HorizontalOptions="Center"/>
             </StackLayout>
         </ContentPage.Content>
     </ContentPage>
