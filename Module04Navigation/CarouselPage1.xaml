@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="Module04Navigation.CarouselPage1" Title="LHIZEL N. TABUAL">
+
+    <!--First Page-->
+    <ContentPage BackgroundImageSource="brown.jpg">
+        <ContentPage.Content>
+            <StackLayout HorizontalOptions="Center" Padding="10">
+                <Label Text="Meet the barista behind Coffeelicious!"
+                       TextColor="White"
+                       FontFamily="Bernhc"
+                       FontSize="29"
+                       HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand"/>
+
+                <Image Source="barista.png"/>
+
+                <Label Text="Lhizel N. Tabual"
+                       TextColor="White"
+                       FontSize="40"
+                       FontFamily="Rage"
+                       HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Barista"
+                       TextColor="Brown"
+                       FontSize="20"
+                       FontFamily="Bernhc"
+                       HorizontalOptions="CenterAndExpand"/>
+
+                <Label/>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <!--Second Page-->
+    <ContentPage>
+        <ContentPage.Content>
+            <StackLayout>
+                <Label Text="Lhizel N. Tabual"/>
+                <Label Text="Barista"/>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <!--Third Page-->    
+    <ContentPage>
+        <ContentPage.Content>
+            <StackLayout>
+                <Label Text="Lhizel N. Tabual"/>
+                <Label Text="Barista"/>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+</CarouselPage>

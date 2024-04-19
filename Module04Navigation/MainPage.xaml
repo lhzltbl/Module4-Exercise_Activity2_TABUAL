@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundImageSource="coffee.jpg"
+             x:Class="Module04Navigation.MainPage" Title="LHIZEL N. TABUAL">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+        <Label Text="Coffeelicious"
+               FontSize="80"
+               TextColor="White"
+               FontFamily="Rage"
+               FontAttributes="Bold"
+               VerticalOptions="Center"/>
+        
+        <Button Text="Go to Carousel Page1"
+                BackgroundColor="#503C3C"
+                TextColor="White"
+                FontFamily="Bernhc"
+                Clicked="CarPage_Open"
+                HorizontalOptions="CenterAndExpand"/>
+        
+        <Button Text="Go to Tabbed Page1"
+                BackgroundColor="#503C3C"
+                TextColor="White"
+                FontFamily="Bernhc"
+                Clicked="TabPage_Open"
+                HorizontalOptions="CenterAndExpand"/>
+    </StackLayout>
+
+</ContentPage>

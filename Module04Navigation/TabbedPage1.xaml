@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Module04Navigation.TabbedPage1" Title="LHIZEL N. TABUAL">
+
+    <!--View Coffee Section-->
+    <ContentPage Title="View Coffees" BackgroundImageSource="brown.jpg">
+        <StackLayout Padding="10">
+            <Label Text="Coffee Choices"
+                   TextColor="Black"
+                   FontSize="50"
+                   FontFamily="Rage"
+                   HorizontalOptions="CenterAndExpand"
+                   FontAttributes="Bold"/>
+
+            <ListView x:Name="CoffeeView" ItemsSource="{Binding Coffee}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell ImageSource="{Binding Image}" Text="{Binding CoffeeName}"
+                                   TextColor="#503C3C"
+                                   Detail="{Binding CoffeeDetails}"
+                                   DetailColor="White">
+                            <ImageCell.ContextActions>
+                                <MenuItem Text="Delete" Clicked="MenuDelete"/>
+                            </ImageCell.ContextActions>
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="Back to Menu"
+                    FontFamily="Bernhc"
+                    Clicked="Menu_Open"
+                    TextColor="White"
+                    BackgroundColor="#503C3C"
+                    HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage>
+
+    <!--User Feeback Section-->
+    <ContentPage Title="Feedback" BackgroundImageSource="brown.jpg">
+        <StackLayout HorizontalOptions="CenterAndExpand"
+                     Padding="10">
+            <Label Text="User Feedback"
+                   TextColor="Black"
+                   FontSize="50"
+                   FontFamily="Rage"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"/>
+
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection>
+                        <EntryCell Label="First Name"
+                       Placeholder="Enter your first name"
+                       x:Name="fname"/>
+                        <EntryCell Label="Last Name"
+                       Placeholder="Enter your last name"
+                       x:Name="lname"/>
+                        <EntryCell Label="Email"
+                       Placeholder="Enter your email"
+                       x:Name="myEmail"/>
+                        <EntryCell Label="Message"
+                       Placeholder="Enter your message"
+                       x:Name="msg"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
+            <Label Text="Your feedback is important to us!"
+                   TextColor="Black"
+                   FontFamily="Bernhc"
+                   FontSize="Medium"
+                   HorizontalOptions="CenterAndExpand"/>
+
+            <Button Text="Submit Feedback"
+                    TextColor="White"
+                    FontFamily="Bernhc"
+                    BackgroundColor="#503C3C"
+                    HorizontalOptions="Center"/>
+
+            <Button Text="Back to Menu"
+                    FontFamily="Bernhc"
+                    Clicked="Menu_Open"
+                    TextColor="White"
+                    BackgroundColor="#503C3C"
+                    HorizontalOptions="Center"/>
+
+        </StackLayout>
+    </ContentPage>
+
+    <!--About Us Section-->
+    <ContentPage Title="About" BackgroundImageSource="brown.jpg">
+        <StackLayout HorizontalOptions="CenterAndExpand"
+                     Padding="10">
+            <Label Text="Coffeelicious"
+                   TextColor="Black"
+                   FontSize="50"
+                   FontFamily="Rage"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+
+            <Label Text="Welcome to Coffeelicious where every sip tells a story and every aroma whispers secrets of delight! Nestled in the heart of the bustling city, our cozy nook beckons all coffee aficionados to embark on a journey of indulgence.
+Step into our quaint haven, where the air is rich with the melody of brewing beans and the warmth of camaraderie. Our baristas, artisans of the caffeine craft, dance with precision to orchestrate your perfect cup – a symphony of flavors crafted with passion and finesse."
+                   FontFamily="Bernhc"
+                   TextColor="Black"
+                   FontSize="20"/>
+
+            <Button Text="Back to Menu"
+                    FontFamily="Bernhc"
+                    Clicked="Menu_Open"
+                    TextColor="White"
+                    BackgroundColor="#503C3C"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"/>
+
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>
